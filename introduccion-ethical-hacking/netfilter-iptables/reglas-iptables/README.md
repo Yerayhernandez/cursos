@@ -65,3 +65,22 @@ puede utilizar en las tablas *nat* o *mangle*. **Ejemplo:** *-i eth0, -o eth1*
 ```--icmp-type:``` Selecciona los paquetes ICMP y comprueba de qué tipo de
 mensaje se trata. **Ejemplo:** *-p icmp --icmp-type echo-reply  //-p icmp
 --icmp-type time-exceded*
+
+## 1.6. Acciones
+
+El parámetro *acción* indica lo que se hará con el paquete si se cumple la
+condición. Algunas acciones son comunes de todas las cadenas aunque otras son
+específicas.
+
+* ACCEPT: Acepta el paquete.
+* DROP: Rechaza el paquete.
+* REJECT: Rechaza el paquete, pero notifica al emisor que el paquete fue
+descartado.
+* LOG: Crea una entrada en el fichero de log.
+* MASQUERADE [dirección_ip]: Enmascaramiento de la dirección IP origen de
+forma dinámica. Solo disponible en la tabla NAT de la cadena POSTROUTING.
+* DNAT --to [dirección_ip][:puerto]: Enmascaramiento de la dirección destino.
+Re-enrutado de paquetes.
+* SNAT--to [dirección_ip][:puerto]: Enmascaramiento de la dirección origen.
+Similar al *masquerade* pero con IP fija.
+- Acciones adicionales: *DENY, REDIRECT, RETURN y MIRROR*
