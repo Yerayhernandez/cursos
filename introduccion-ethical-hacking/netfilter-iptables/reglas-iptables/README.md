@@ -41,3 +41,14 @@ reglas, ¿qué hacer con ellos? ACCEPT / DROP
 (ACCEPT o DROP)
 * Importante tener cuidado con el *orden secuencial*
 * Acciones con el parámetro *-j [acción]*
+
+## 1.4. Operadores
+
+- **p [protocolo]:** Sobre qué protocolo se realiza la comprobación,
+posibilidades en */etc/protocols*. **Ejemplo:** *-p tcp, udp*
+
+- **s [ip/máscara origen]:** IP o subred origen del paquete.
+**Ejemplo:** *-s 192.168.1.0/24*
+
+- **i/ -o [interfaz]:** Especifica la interfaz de entrada o salida, solo se
+puede utilizar en las tablas *nat* o *mangle*. **Ejemplo:** *-i eth0, -o eth1*
