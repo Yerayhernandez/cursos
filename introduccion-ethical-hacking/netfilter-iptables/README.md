@@ -70,7 +70,7 @@ el sistema.
 - **POSTROUTING:** acción a realizar justo antes de enviar el paquete a la
 interfaz destino.
 
-![01](../images/Selección_001.png)
+![01](../images/01.png)
 
 ### 3.3. Tablas
 
