@@ -138,3 +138,20 @@ certificado.
   - Publicación y respaldo del certificado. Publicado por parte de la CA
 o del solicitante en almacenes públicos o diseminación con cada uso y copia
 de respaldo en el almacén.
+
+### 2.2.2. Almacenamiento y uso
+
+* Almacenamiento
+  - Solo la clave privada precisa protección
+
+* Uso: validación del certificado
+  - Debe estar vigente en plazo de validez sin estar revocado
+  - La CA es de confianza para quien lo verifica
+  - Las firmas son válidas
+  - Su uso consistente con su política
+
+### 2.2.3. Expiración, Renovación
+
+* Expiracion: se agoa el plazo de validez, no requiere acción
+* Actualización: solo de plazo de validez
+* Renovación: También de claves
