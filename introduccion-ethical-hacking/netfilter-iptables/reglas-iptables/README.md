@@ -52,3 +52,16 @@ posibilidades en */etc/protocols*. **Ejemplo:** *-p tcp, udp*
 
 - **i/ -o [interfaz]:** Especifica la interfaz de entrada o salida, solo se
 puede utilizar en las tablas *nat* o *mangle*. **Ejemplo:** *-i eth0, -o eth1*
+
+## 1.5. Extensiones
+
+*Protocolo* extiende sus funcionalidades con distintos operadores denominados
+*extensiones*:
+
+```--sport, --dport:``` Puerto origen o destino para *tcp* o *udp*
+
+**Ejemplos:** *-p tcp --sport 0:1024  //  -p tcp, udp --dport 80*
+
+```--icmp-type:``` Selecciona los paquetes ICMP y comprueba de qué tipo de
+mensaje se trata. **Ejemplo:** *-p icmp --icmp-type echo-reply  //-p icmp
+--icmp-type time-exceded*
